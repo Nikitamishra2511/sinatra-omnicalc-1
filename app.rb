@@ -5,7 +5,7 @@ require "sinatra/reloader"
 require "active_support/all"
 
 get("/") do
-  erb :homepage
+  erb :square
 end
 
 get("/square/new") do
