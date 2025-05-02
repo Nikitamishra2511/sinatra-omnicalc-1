@@ -1,0 +1,84 @@
+**views/square.erb**
+```html
+<h1>Square</h1>
+<form action="/square/results" method="get">
+  <label for="user_number">Enter a number</label>
+  <input id="user_number" name="user_number" type="text" placeholder="What number do you want to square?">
+  <button type="submit">Calculate square</button>
+</form>
+```
+
+**views/square_results.erb**
+```html
+<h1>Square Results</h1>
+<p><strong>Number:</strong> <%= user_number %></p>
+<p><strong>Square:</strong> <%= square %></p>
+<p><a href="/square/new">Calculate another square</a></p>
+```
+
+**views/square_root.erb**
+```html
+<h1>Square Root</h1>
+<form action="/square_root/results" method="get">
+  <label for="user_number">Enter a number</label>
+  <input id="user_number" name="user_number" type="text" placeholder="What number do you want the square root of?">
+  <button type="submit">Calculate square root</button>
+</form>
+```
+
+**views/square_root_results.erb**
+```html
+<h1>Square Root Results</h1>
+<p><strong>Number:</strong> <%= user_number %></p>
+<p><strong>Square root:</strong> <%= square_root %></p>
+<p><a href="/square_root/new">Calculate another square root</a></p>
+```
+
+**views/random.erb**
+```html
+<h1>Random</h1>
+<form action="/random/results" method="get">
+  <label for="min">Minimum</label>
+  <input id="min" name="min" type="text" placeholder="Minimum number">
+
+  <label for="max">Maximum</label>
+  <input id="max" name="max" type="text" placeholder="Maximum number">
+
+  <button type="submit">Pick random number</button>
+</form>
+```
+
+**views/random_results.erb**
+```html
+<h1>Random Results</h1>
+<p><strong>Minimum:</strong> <%= min %></p>
+<p><strong>Maximum:</strong> <%= max %></p>
+<p><strong>Random:</strong> <%= random_number %></p>
+<p><a href="/random/new">Pick another</a></p>
+```
+
+**views/payment.erb**
+```html
+<h1>Payment</h1>
+<form action="/payment/results" method="get">
+  <label for="apr">APR</label>
+  <input id="apr" name="apr" type="text" placeholder="E.g. 5.42">
+
+  <label for="years">Number of years</label>
+  <input id="years" name="years" type="text" placeholder="How many years to repay?">
+
+  <label for="principal">Principal</label>
+  <input id="principal" name="principal" type="text" placeholder="How much principal?">
+
+  <button type="submit">Calculate monthly payment</button>
+</form>
+```
+
+**views/payment_results.erb**
+```html
+<h1>Payment Results</h1>
+<p><strong>APR:</strong> <%= formatted_apr %></p>
+<p><strong>Number of years:</strong> <%= years %></p>
+<p><strong>Principal:</strong> <%= formatted_principal %></p>
+<p><strong>Monthly payment:</strong> <%= monthly_payment %></p>
+<p><a href="/payment/new">Calculate another payment</a></p>
